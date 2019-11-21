@@ -6,6 +6,12 @@ a {
   text-decoration: none;
 }
 
+a:focus,
+.button:focus,
+.header__button-secondary:focus {
+  outline: none;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -40,7 +46,7 @@ a {
 }
 
 .header-title {
-  position: relative; 
+  position: relative;
 }
 
 .gradient {
@@ -59,37 +65,44 @@ a {
 
 .button {
   border: 2px solid #41b24f;
-  border-radius: 40px;  
+  border-radius: 40px;
   background: #41b24f;
   height: 48px;
-  transition: 500ms;
+  transition: ease-in .2s ;
   text-decoration: none;
   color: white;
-}
-
-.button:hover {
-  cursor: pointer;
-  background: #229430;
-  border: 2px solid #229430;
 }
 
 .header__button {
   width: 16vw;
 }
 
-.header__button--left {
+.header__button-primary {
   background: #41b24f;
   margin-right: 30px;
   color: white;
 }
 
-.header__button--right {
+.header__button-secondary {
+  border: 2px solid #41b24f;
+  border-radius: 40px;
+  height: 48px;
+  transition: ease-in .2s ;
+  text-decoration: none;
   background: none;
   color: #41b24f;
 }
 
-.header__button--right:hover {
-  color: white;
+.header__button-secondary:hover {
+  cursor: pointer;
+  color: #229430;
+  border: 2px solid #229430;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #229430;
+  border: 2px solid #229430;
 }
 
 .buy {
@@ -116,7 +129,7 @@ a {
 .header-info {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   margin: 108px auto 0;
 }
 
@@ -173,7 +186,7 @@ a {
 
 .wave-up {
   height: 190px;
-  background: url("../images/wave_up.svg");
+  background: url(./images/wave_up.svg);
   background-size: cover;
 }
 
@@ -183,7 +196,7 @@ a {
 
 .wave-down {
   height: 179px;
-  background: url("../images/wave_down.svg");
+  background: url(./images/wave_down.svg);
   background-size: cover;
 }
 
@@ -217,7 +230,9 @@ a {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   column-gap: 30px;
+  row-gap: 15px;
   width: 82.1vw;
 }
 
@@ -227,6 +242,8 @@ a {
   border-radius: 125px 0 0 0;
   padding: 6.1vw 4.7vw 5vw 7.63vw;
   text-align: left;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 .content__block-left h2 {
@@ -252,20 +269,13 @@ a {
   margin-top: 50px;
 }
 
-.content__block-right-down, 
 .content__block-right-up {
-  width: 37.7vw;
-  height: 49%;
-}
-
-.content__block-right-up {
-  margin-bottom: 3%;
-  background-image: url(../images/grass_up.jpg);
+  background-image: url(./images/grass_up.jpg);
   background-size: cover;
 }
 
 .content__block-right-down {
-  background-image: url(../images/grass_down.jpg);
+  background-image: url(./images/grass_down.jpg);
   background-size: cover;
   border-radius: 0 0 125px 0;
 }
@@ -288,8 +298,11 @@ a {
 }
 
 .detox {
-  height: 59vh;
-  margin-bottom: 83px;
+  height: 38vw;
+}
+
+.detox__title-block {
+  position: relative;
 }
 
 @media (max-width: 900px) {
@@ -388,7 +401,7 @@ a {
 
 .rewiew__card-title p {
   margin: 0;
-  font-family: Open Sans;
+  font-family: 'Open Sans' serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -491,16 +504,64 @@ a {
   line-height: 48px;
 }
 
-.trusted__content-right a {
-  color: #41b24f;
+.trusted__content-link,
+.rewiew__more {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
 }
 
-.text-design-line {
+.trusted__content-more,
+.rewiew__more {
+  color: #41b24f;
   display: inline-block;
+  padding-right: 70px;
+  transition: .708s ease-out;
+}
+
+.trusted__content-more:hover,
+.rewiew__more:hover {
+  padding-left: 70px;
+  padding-right: 0;
+  color: #229430;
+}
+
+.trusted__content-link::before,
+.rewiew__more-link::before {
+  transition: .6s ease-out .108s;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: #41b24f;
+  top: 50%;
+  left: 0;
+}
+
+.trusted__content-link:hover::before,
+.rewiew__more-link:hover::before {
   width: 29px;
-  margin-left: 32px;
-  margin-bottom: 3px;
-  border: 1px solid #41b24f;
+  transition-delay: 0s;
+}
+
+.trusted__content-link::after,
+.rewiew__more-link::after {
+  transition: .6s ease-out .108s;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  height: 2px;
+  width: 29px;
+  background-color: #41b24f;
+  top: 50%;
+  right: 0;
+}
+
+.trusted__content-link:hover::after,
+.rewiew__more-link:hover::after {
+  width: 0;
+  transition-delay: 0s;
 }
 
 .detox-bottle {
@@ -508,4 +569,204 @@ a {
   grid-column-start: 1;
   grid-column-end: 3;
   width: 100%;
+}
+
+.buy-title {
+  margin: 12.8vw auto 0;
+
+  text-align: center;
+  font-family: 'Play', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.6vw;
+  line-height: 5vw;
+  margin-bottom: 2.7vw;
+  width: 43.75vw;
+}
+
+.buy-help {
+  margin: 0 auto;
+
+  text-align: center;
+  font-family: 'Open Sans', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  width: 36.7vw;
+}
+
+.select2-container--default .select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple
+{
+  background: inherit;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #41b24f;
+  outline: none;
+}
+
+.select2-container .select2-selection--multiple {
+  min-height: 45px;
+}
+
+.sel:not(:first-child),
+.more {
+  margin-top: 30px;
+}
+
+.sel,
+.more {
+  text-align: center;
+  width: 100%;
+}
+
+.submit-form {
+  width: 100%;
+}
+
+input.select2-search__field {
+  position: relative;
+  line-height: 120%;
+  cursor: pointer;
+  color: transparent;
+}
+
+.select2-container--default .select2-selection--multiple::after {
+  position: absolute;
+  content: url(./images/arrow-down.svg);
+  background-repeat: no-repeat;
+  width: 12px;
+  right: 33px;
+  top: 5%;
+}
+
+.more .select2-container--default .select2-selection--multiple::before {
+  position: absolute;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 125%;
+  content: 'As a beverage, as pills, sugar free';
+  left: 6px;
+  bottom: -5px;
+}
+
+.select2-container--default .select2-selection--multiple:hover::after {
+  opacity: 0.3;
+}
+
+.select2-search__field::placeholder {
+  font-family: 'Open Sans', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #222222;
+}
+
+.more .select2-container--default .select2-selection--multiple,
+.more .select2-container--default.select2-container--focus .select2-selection--multiple {
+  background: inherit;
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+
+.select2-container--default .select2-selection--multiple {
+  cursor: pointer;
+}
+
+.submit-form__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.submit-form__button {
+  width: 300px;
+}
+
+.footer__line {
+  position: relative;
+  margin: 1.59vw auto 3.95vw;
+  width: 84.8vw;
+  height: 3px;
+  background: #41b24f;
+}
+
+.footer__line__leaf-up,
+.footer__line__leaf-down {
+  position: absolute;
+}
+
+.footer__line__leaf-up {
+  bottom: -22px;
+  right: -64px;
+}
+
+.footer__line__leaf-down {
+  top: -10px;
+  right: -46px;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5.2vw;
+}
+
+.footer__links__contact a:nth-of-type(1) {
+  margin-right: 1.94vw;
+}
+
+.footer__links__contact a:nth-of-type(2) {
+  margin-right: 2.43vw;
+}
+
+.footer__links__contact a:nth-of-type(3) {
+  margin-right: 2.63vw;
+}
+
+.footer__links__social a,
+.footer__links__contact a {
+  color: #1d2f1f;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.footer__links__social {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.links__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links__social:not(:last-child) {
+  margin-right: 3.6vw;
+}
+
+.links__social img {
+  margin-right: 12px;
+}
+
+.privacy {
+  margin: 0 auto 21px;
+  text-align: center;
+  width: 59vw;
+}
+
+.privacy p {
+  font-size: 10px;
+  line-height: 16px;
+  color: #999999;
 }

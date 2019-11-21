@@ -6,8 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Play:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -35,12 +38,12 @@
     <div class="buy">
       <h1 class="head-title"><span>Live fully <br></span>Detox quickly</h1>
       <a href="#">
-        <button class="button header__button header__button--left">
-          Shop now 
+        <button class="button header__button header__button-primary">
+          Shop now
         </button>
       </a>
       <a href="#">
-        <button class="button header__button header__button--right">
+        <button class="header__button header__button-secondary">
           Find a store
         </button>
       </a>
@@ -63,14 +66,14 @@
 
     <div class="right-block">
       <h2 class="header-info__right-title">
-          Cleanse smart,<br> the same day 
+          Cleanse smart,<br> the same day
       </h2>
       <p>
           Get rid of toxins quickly and safely so you can live fully again.
-          How? With the herbal detox of choice for smart, fast cleansing. 
+          How? With the herbal detox of choice for smart, fast cleansing.
           Proven by millions. Perfect for you.
       </p>
-      <p> 
+      <p>
           Now, let’s find exactly what you need.
       </p>
       <img class="header-info__leaf_down" src="./images/Leaf_up.svg" alt="leaf">
@@ -86,35 +89,33 @@
           Get detox for your body and needs
         </h2>
         <p>
-          Our special blend of functional herbs and minerals is 
-          unique to us and essential for you to get the added 
-          nutrients your body needs during a rapid detox. 
+          Our special blend of functional herbs and minerals is
+          unique to us and essential for you to get the added
+          nutrients your body needs during a rapid detox.
         </p>
       </div>
       <div class="content__block">
         <div class="content__block-left">
             <img class="content__block__leaf-big" src="./images/Leaf_small_2.svg" alt="">
-            <img class="content__block__leaf-small"src="./images/Leaf_small_1.svg" alt="">    
+            <img class="content__block__leaf-small"src="./images/Leaf_small_1.svg" alt="">
           <h2>Same-day detox, must-have nutrients</h2>
           <p>
-            Yes, your body gets rid of toxins on its own, 
-            but its process is complex and can take more 
-            than a day. Our unique mix of herbs and minerals 
-            kicks your body in gear to detox naturally and 
-            quickly…with extra benefits from essential minerals 
-            and vitamins. We get your body back to clean when you 
-            need it. Win. Win. 
+            Yes, your body gets rid of toxins on its own,
+            but its process is complex and can take more
+            than a day. Our unique mix of herbs and minerals
+            kicks your body in gear to detox naturally and
+            quickly…with extra benefits from essential minerals
+            and vitamins. We get your body back to clean when you
+            need it. Win. Win.
           </p>
-          <a href="#"> 
+          <a href="#">
             <button class="button content__button">
               How to detox
             </button>
           </a>
         </div>
-        <div class="content__block-right">
           <div class="content__block-right-up"></div>
           <div class="content__block-right-down"></div>
-        </div>
       </div>
     </div>
     <div class="wave-down"></div>
@@ -122,9 +123,9 @@
 
   <div class="detox">
     <div class="detox__title">
-      <div style = "position: relative;">
+      <div class="detox__title-block">
         <h2>
-          Why detox the 
+          Why detox the
           Right way?
         </h2>
         <img class="detox__leaf-left" src="./images/Leaf_2.png" alt="">
@@ -184,15 +185,18 @@
             </div>
             <div class="rewiew__text">
               <p>
-                Any one who says this product doesnt work doesnt 
-                read instructions i use it often and found my own 
-                method thats works 100% take 12 to 14 hours before 
+                Any one who says this product doesnt work doesnt
+                read instructions i use it often and found my own
+                method thats works 100% take 12 to 14 hours before
                 test fill jug back up with water after using and pee
-                as often as u can. Keep hydrating urself. 
-                Try to pee 4-5 times before test 
-                <a href="#">...Read more</a> 
+                as often as u can. Keep hydrating urself.
+                Try to pee 4-5 times before test
+                <a href="#">...Read more</a>
               </p>
-              <a href="#">More about QCarbo 16 <span class="more-about-line"></span></a>
+                            <div class="rewiew__more">
+                <a class="rewiew__more-link" href="#">More about QCarbo 16</a>
+              </div>
+
             </div>
           </div>
           <div class="rewiew__card">
@@ -201,7 +205,7 @@
               <div>
                 <h4>Lilu Dallas</h4>
                 <p>About QCarbo16</p>
-              </div>            
+              </div>
             </div>
             <div class="rewiew__stars">
               <img src="./images/Star_green.svg" alt="">
@@ -212,18 +216,20 @@
             </div>
             <div class="rewiew__text">
               <p>
-                  Any one who says this product doesnt work doesnt 
-                  read instructions i use it often and found my own 
-                  method thats works 100% take 12 to 14 hours before 
+                  Any one who says this product doesnt work doesnt
+                  read instructions i use it often and found my own
+                  method thats works 100% take 12 to 14 hours before
                   test fill jug back up with water after using and pee
-                  as often as u can. 
+                  as often as u can.
               </p>
-              <a href="#">More about QCarbo 16 <span class="more-about-line"></span></a>
+              <div class="rewiew__more">
+                <a class="rewiew__more-link" href="#">More about QCarbo 16</a>
+              </div>
             </div>
           </div>
           <div class="rewiew__card">
             <div class="rewiew__card-title">
-              <img src="./images/avatar_3.png" alt="">              
+              <img src="./images/avatar_3.png" alt="">
               <div>
                 <h4>AbimbolaRich child</h4>
                 <p>About QCarbo16</p>
@@ -238,11 +244,14 @@
             </div>
             <div class="rewiew__text">
               <p>
-                  Any one who says this product doesnt work doesnt 
+                  Any one who says this product doesnt work doesnt
                   read instructions i use it often and found my
-                   own method. 
+                   own method.
               </p>
-              <a href="#">More about QCarbo 16 <span class="more-about-line"></span></a>
+                            <div class="rewiew__more">
+                <a class="rewiew__more-link" href="#">More about QCarbo 16</a>
+              </div>
+
             </div>
           </div>
           <div class="rewiew__card">
@@ -268,11 +277,14 @@
                   before test fill jug back up with water after
                   using and pee as often as u can. Keep hydrating
                   urself. Try to pee 4-5 times before test
-                <a href="#">...Read more</a> 
+                <a href="#">...Read more</a>
               </p>
-              <a href="#">More about QCarbo 16 <span class="more-about-line"></span></a>
+                            <div class="rewiew__more">
+                <a class="rewiew__more-link" href="#">More about QCarbo 16</a>
+              </div>
+
             </div>
-          </div>        
+          </div>
         </div>
       </div>
     </div>
@@ -287,16 +299,16 @@
   <div class="trusted">
     <div class="trusted__title">
       <h2>
-        Trusted detox for 30 years 
+        Trusted detox for 30 years
       </h2>
     </div>
     <div class="trusted__content">
       <div class="trusted__content-left">
         <p>
-          We’re known for the last 30 years for creating some of the 
-          best, herbal detox and cleansing products available. Hands down. 
-          Every product you use is formulated by a team of expert 
-          nutritionists and chemists to kick your body’s natural 
+          We’re known for the last 30 years for creating some of the
+          best, herbal detox and cleansing products available. Hands down.
+          Every product you use is formulated by a team of expert
+          nutritionists and chemists to kick your body’s natural
           elimination process into high gear. Quickly and safely.
         </p>
         <img class="trusted__leaf-up" src="./images/Leaf_trust_up.svg" alt="">
@@ -305,15 +317,108 @@
       <div class="trusted__content-right">
         <h3>100% satisfaction, guaranteed</h3>
         <p>
-          If you’re not satisfied with your product for any reason, 
+          If you’re not satisfied with your product for any reason,
           we’ll send you a refund.
         </p>
-        <a href="#">Learn more <span class="text-design-line"></span></a>
+        <div class="trusted__content-link">
+          <a class="trusted__content-more" href="#">Learn more</a>
+        </div>
       </div>
       <img class="detox-bottle" src="./images/detox-bottle.png" alt="">
     </div>
   </div>
-  <div>some text</div>
+
+  <div class="buy-block">
+    <h2 class="buy-title">
+      Let’s find the detox for your body
+    </h2>
+    <p class="buy-help">
+      Whether you’re exposed to toxins from the
+      environment or lifestyle choices in the last
+      30 days, toxins may still be present. No worries,
+      we are here to help you find what’s right for you.
+    </p>
+  </div>
+  <div class="wave-up"></div>
+  <div class="content-background">
+    <form action="#" class="submit-form">
+    <div class="sel">
+      <select class="js-select" multiple="multiple">
+      </select>
+    </div>
+    <div class="sel">
+      <select class="js-select2" multiple="multiple">
+      </select>
+    </div>
+    <div class="sel">
+      <select class="js-select3" multiple="multiple">
+      </select>
+    </div>
+    <div class="more">
+      <select class="js-select4" multiple="multiple">
+      </select>
+    </div>
+    <a class="submit-form__link" href="#">
+      <button class="button submit-form__button">
+          Show 16 matching products
+      </button>
+    </a>
+  </form>
+  </div>
+  <div class="wave-down"></div>
+
+  <div class="footer">
+    <div class="footer__line">
+      <img class="footer__line__leaf-up" src="./images/footer_Leaf_up.svg" alt="">
+      <img class="footer__line__leaf-down" src="./images/footer_Leaf_down.svg" alt="">
+    </div>
+    <div class="footer__links">
+      <div class="footer__links__contact">
+        <a href="#">Contact us</a>
+        <a href="#">Satisfaction guarantee</a>
+        <a href="#">Become a retailer</a>
+        <a href="#">Terms, Security & Privacy</a>
+      </div>
+      <div class="footer__links__social">
+        <a href="#" class="links__social">
+          <img src="./images/youtube.svg" alt="">
+          <p>
+            YouTube
+          </p>
+        </a>
+        <a href="#" class="links__social">
+          <img src="./images/facebook.svg" alt="">
+          <p>
+              Facebook
+          </p>
+        </a>
+        <a href="#" class="links__social">
+          <img src="./images/instagram.svg" alt="">
+          <p>
+              Instagram
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="privacy">
+        <p>
+          Our products are dietary supplements. Statements made about
+          these products have not been evaluated by the Food and Drug
+          Administration. Products are not intended to diagnose, cure
+          or prevent any disease. Further, products are not intended
+          for any unlawful purpose, and we disclaim any and all
+          representations or references to any such purpose by
+          any party including but not limited to distributors,
+          retailers and consumers. Any discussion of illegal
+          activity will end the conversation.
+        </p>
+        <p>
+          © Copyright 2019
+        </p>
+      </div>
+  </div>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
 </body>
 </html>
+
