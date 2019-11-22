@@ -596,6 +596,28 @@ a:focus,
   width: 36.7vw;
 }
 
+.buy-title-block {
+  position: relative;
+}
+
+.leaf_find_left {
+  position: absolute;
+  top: 1.55vw;
+  left: 18.75vw;
+}
+
+.leaf_find_left_down {
+  position: absolute;
+  bottom: -12.8vw;
+  left: 22.9vw;
+}
+
+.leaf_find_right {
+  position: absolute;
+  top: 1.55vw;
+  right: 15.35vw;
+}
+
 .select2-container--default .select2-selection--multiple,
 .select2-container--default.select2-container--focus .select2-selection--multiple
 {
